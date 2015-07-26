@@ -1,6 +1,7 @@
 'use strict';
 var LightningVisualization = require('lightning-visualization');
 var Datamaps = require('datamaps-all-browserify');
+var $ = require('jquery');
 var _ = require('lodash');
 var colorbrewer = require('colorbrewer')
 

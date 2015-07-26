@@ -5,7 +5,8 @@
     "colorbrewer": "0.0.2",
     "datamaps-all-browserify": "^0.3.4",
     "lightning-visualization": "^0.0.6",
-    "lodash": "^3.8.0"
+    "lodash": "^3.8.0",
+    "jquery": "^2.1.4"
   },
   "keywords": [
     "lightning-visualization"
