@@ -1,0 +1,17 @@
+{
+  "name": "lightning-map",
+  "version": "0.0.0",
+  "dependencies": {
+    "colorbrewer": "0.0.2",
+    "datamaps-all-browserify": "^0.3.4",
+    "lightning-visualization": "^0.0.6",
+    "lodash": "^3.8.0"
+  },
+  "keywords": [
+    "lightning-visualization"
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "lightning": {}
+}
