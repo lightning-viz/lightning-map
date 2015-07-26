@@ -1,6 +1,6 @@
 {
   "name": "lightning-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "colorbrewer": "0.0.2",
     "datamaps-all-browserify": "^0.3.4",
