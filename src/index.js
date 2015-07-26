@@ -84,7 +84,7 @@ var Visualization = LightningVisualization.extend({
     formatData: function(data) {
         data.colormap = data.colormap ? data.colormap : this.defaultColormap
         return data
-    },
+    }
 
     // updateData: function(formattedData) {
     //     this.data = formattedData;
