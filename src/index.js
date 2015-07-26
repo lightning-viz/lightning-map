@@ -10,6 +10,8 @@ var Visualization = LightningVisualization.extend({
     defaultColormap: 'Purples',
 
     init: function() {
+        this.$el = $(this.selector).first();
+        this.$el.append('<div id="map-container"></div>');
         this.render();
     },
 
@@ -23,9 +25,6 @@ var Visualization = LightningVisualization.extend({
         var values = data.values
 
         var self = this
-
-        var $el = $(selector).first()
-        $el.append('#map-container')
 
         var dataObj = {}; 
         var fills = {
@@ -50,7 +49,7 @@ var Visualization = LightningVisualization.extend({
         });
 
         var map = new Datamap({
-            element: $el.find('#map-container')[0],
+            element: self.$el.find('#map-container')[0],
             height: height,
             scope: (isWorld) ? 'world' : 'usa',
             fills: fills,
