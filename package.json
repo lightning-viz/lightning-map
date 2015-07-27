@@ -1,6 +1,6 @@
 {
   "name": "lightning-map",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "colorbrewer": "0.0.2",
     "datamaps-all-browserify": "^0.3.4",
@@ -13,6 +13,10 @@
   ],
   "engines": {
     "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightning-viz/lightning-map.git"
   },
   "lightning": {}
 }
