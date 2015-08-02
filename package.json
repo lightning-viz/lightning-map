@@ -18,5 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/lightning-viz/lightning-map.git"
   },
-  "lightning": {}
+  "lightning": {
+    "name": "map"
+  }
 }
