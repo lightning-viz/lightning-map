@@ -37,7 +37,7 @@ var Visualization = LightningVisualization.extend({
             return v.length === 3;
         });
         
-        var z = self.scaleColors(values, 9, data.colormap)
+        var z = self.scaleColors(values, 8, data.colormap)
 
         _.each(regions, function(reg, i) {
             var c = z(values[i]);
