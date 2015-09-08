@@ -51,6 +51,7 @@ var Visualization = LightningVisualization.extend({
         var map = new Datamap({
             element: self.$el.find('#map-container')[0],
             height: height,
+            width: width,
             scope: (isWorld) ? 'world' : 'usa',
             fills: fills,
             data: dataObj,
