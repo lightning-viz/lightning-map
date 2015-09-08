@@ -3,7 +3,8 @@ var LightningVisualization = require('lightning-visualization');
 var Datamaps = require('datamaps-all-browserify');
 var $ = require('jquery');
 var _ = require('lodash');
-var colorbrewer = require('colorbrewer')
+var colorbrewer = require('colorbrewer');
+var utils = require('lightning-client-utils');
 
 var Visualization = LightningVisualization.extend({
 
@@ -76,9 +77,18 @@ var Visualization = LightningVisualization.extend({
     scaleColors: function(values, n, colormap) {
         var min = d3.min(values)
         var max = d3.max(values)
-        var color = colorbrewer[colormap][n]
-        var zdomain = d3.range(n).map(function(d) {return d * (max - min) / (n - 1) + min})
-        var z = d3.scale.linear().domain(zdomain).range(color);
+        var distinct = _.uniq(values).length
+        if (distinct > 8) {
+            distinct = 8
+        }
+        var cmap
+        if (colormap == "Lightning") {
+            cmap = utils.getColors(distinct)
+        } else {
+            cmap = colorbrewer[colormap][distinct]
+        }
+        var zdomain = d3.range(n).map(function(d) {return d * (max - min) / (distinct - 1) + min})
+        var z = d3.scale.linear().domain(zdomain).range(cmap);
         return z
     },
 
