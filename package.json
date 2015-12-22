@@ -3,11 +3,12 @@
   "version": "0.0.10",
   "dependencies": {
     "colorbrewer": "0.0.2",
+    "d3": "^3.5.12",
     "datamaps-all-browserify": "^0.3.4",
-    "lightning-visualization": "^0.1.1",
-    "lodash": "^3.8.0",
     "jquery": "^2.1.4",
-    "lightning-client-utils": "^0.7.5"
+    "lightning-client-utils": "^0.7.5",
+    "lightning-visualization": "^0.1.1",
+    "lodash": "^3.8.0"
   },
   "keywords": [
     "lightning-visualization"

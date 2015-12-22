@@ -5,6 +5,8 @@ var $ = require('jquery');
 var _ = require('lodash');
 var colorbrewer = require('colorbrewer');
 var utils = require('lightning-client-utils');
+var d3 = require('d3');
+
 
 var Visualization = LightningVisualization.extend({
 
@@ -27,7 +29,7 @@ var Visualization = LightningVisualization.extend({
 
         var self = this
 
-        var dataObj = {}; 
+        var dataObj = {};
         var fills = {
             defaultFill: '#ddd'
         };
@@ -37,7 +39,7 @@ var Visualization = LightningVisualization.extend({
         var isWorld = _.every(regions, function(v) {
             return v.length === 3;
         });
-        
+
         var z = self.scaleColors(values, 8, data.colormap)
 
         _.each(regions, function(reg, i) {
@@ -56,7 +58,7 @@ var Visualization = LightningVisualization.extend({
             scope: (isWorld) ? 'world' : 'usa',
             fills: fills,
             data: dataObj,
-            geographyConfig: {        
+            geographyConfig: {
 
                 popupTemplate: function(geography, data) { //this function should just return a string
                     //if(data) {
@@ -102,7 +104,7 @@ var Visualization = LightningVisualization.extend({
     //     // TODO: re-render the visualization
     // },
 
-    // appendData: function(formattedData) {        
+    // appendData: function(formattedData) {
     //     // TODO: update this.data to include the newly
     //     //       added formattedData
 
