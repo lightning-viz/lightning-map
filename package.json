@@ -1,6 +1,6 @@
 {
   "name": "lightning-map",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "dependencies": {
     "colorbrewer": "0.0.2",
     "d3": "^3.5.12",
